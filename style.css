@@ -1,7 +1,7 @@
 body {
   margin: 10;
   height: 114vh;
-  background: #191919;
+  background: #ffffff; /* White background */
   background-size: cover;
   font-family: "Montserrat", Arial, sans-serif;
   justify-content: center;
@@ -22,23 +22,23 @@ div {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  background-color: #242424;
+  backdrop-filter: blur(10px);
+  background-color: #f8f9fa; /* Light gray for container background */
   padding: 20px;
   border-radius: 10px;
-  color: #242424;
+  color: #000000; /* Black text */
 }
 
 h1, h2, h3 {
   text-align: center;
-  color: #f4f4f4;
+  color: #000000; /* Black headings */
 }
 
 label {
   font-weight: bold;
   margin: 10px 0;
   display: inline-block;
-  color: #f4f4f4;
+  color: #000000; /* Black label text */
   font-family: "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
@@ -53,9 +53,9 @@ button {
   width: 80px;
   height: 80px;
   border-radius: 15px;
-  border: 1px solid #29282f;
-  background-color: #29282f;
-  color: #f4f4f4;
+  border: 1px solid #007bff; /* Blue border */
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
   cursor: pointer;
   text-align: center;
   padding: 0;
@@ -66,18 +66,15 @@ button {
   justify-content: center;
   align-items: center;
 }
-.buttonselect.selected {
-  background-color: #8c9c4c;
-  color: black;
-
-}
-
 
 button:hover {
   opacity: 0.8;
 }
 
-
+.buttonselect.selected {
+  background-color: #0056b3; /* Darker blue for selected */
+  color: #ffffff;
+}
 
 .tab {
   display: flex;
@@ -87,18 +84,19 @@ button:hover {
 .tab button {
   padding: 10px 20px;
   margin-right: 5px;
-  border: 1px solid #ccc;
-  background-color: black;
+  border: 1px solid #007bff;
+  background-color: #007bff; /* Blue tab buttons */
   cursor: pointer;
   background-size: cover;
   background-position: center;
   border-radius: 15px;
   height: 40px;
   width: 40px;
+  color: #ffffff;
 }
 
 .tab button.active {
-  background-color: green;
+  background-color: #0056b3; /* Darker blue for active tab */
 }
 
 .minion-buttons {
@@ -107,13 +105,13 @@ button:hover {
 }
 
 .minion-buttons button.selected {
-  background-color: #8c9c4c;
-  color: black;
+  background-color: #0056b3; /* Darker blue for selected */
+  color: #ffffff;
 }
 
 .minion-buttons button.active {
-  background-color: green;
-  color: black;
+  background-color: #0056b3;
+  color: #ffffff;
 }
 
 .minion-buttons.active {
@@ -122,65 +120,64 @@ button:hover {
 
 .tab button:hover, .minion-buttons button:hover {
   opacity: 0.8;
-}<style>
-/* Style for the button container */
-.calcbutton {
-  display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  align-items: center; /* Centers the button vertically */
-  height: 100vh; /* Ensures the container fills the entire height of the viewport */
 }
 
-/* Style for the button itself */
+.calcbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .calcuateButton {
-  background-color: dark-gray; /* Green background */
-  color: white; /* White text color */
-  font-size: 20px; /* Text size */
-  padding: 15px 150px; /* Adds padding inside the button (wider) */
-  border: none; /* Removes default border */
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Changes cursor to a pointer on hover */
-  transition: background-color 0.3s; /* Smooth transition for background color */
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
-  max-width: 100%; /* Ensures the button doesn't overflow the parent container */
-  overflow: hidden; /* Prevents the text from overflowing outside the button */
-  text-overflow: ellipsis; /* Adds "..." if the text overflows */
+  background-color: #007bff; /* Blue background */
+  color: #ffffff; /* White text */
+  font-size: 20px;
+  padding: 15px 150px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-
 .calcuateButton:hover {
-  background-color: #45a049; 
+  background-color: #0056b3; /* Darker blue */
 }
-
 
 .calcuateButton:focus {
-  outline: none; 
-  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);    }
-.result {
-  font-size: 30px;
-  color: white;
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Blue glow */
 }
 
-
+.result {
+  font-size: 30px;
+  color: #000000; /* Black text */
+}
 
 .toggle-button {
   width: 80px;
   height: 80px;
   border-radius: 15px;
-  border: 1px solid #29282f;
-  background-color: #29282f;
+  border: 1px solid #007bff; /* Blue border */
+  background-color: #007bff; /* Blue background */
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  color: #ffffff; /* White text */
 }
+
 .toggle-button[data-value="no"] {
   opacity: 0.5;
 }
 
 .toggle-button[data-value="yes"].selected {
-  background-color: #8c9c4c;
-
+  background-color: #0056b3; /* Darker blue */
+  color: #ffffff;
 }
 
 .button-group {
@@ -226,5 +223,5 @@ button:hover {
   display: flex;
   justify-content: center;
   align: center;
-  gap: 20px; 
-}
+  gap: 20px;
+    }
